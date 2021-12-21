@@ -2,14 +2,6 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "main": "index.js",
-  "engines": {
-    "node": "14.17.1"
-  },
-  "devDependencies": {
-    "webpack": "1.14.0",
-    "webpack-dev-server": "1.16.2"
-  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -21,12 +13,11 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1",
-    "http-server": "0.10.0"
+    "react-scripts": "3.4.1"
   },
   "scripts": {
     "dev": "nodemon index.js",
-    "production": "NODE_ENV=production webpack --progress -p",
+    "production": "pm2 start src/index.js --name frontend",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
