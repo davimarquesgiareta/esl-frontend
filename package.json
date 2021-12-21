@@ -2,8 +2,13 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "main": "index.js",
   "engines": {
     "node": "14.17.1"
+  },
+  "devDependencies": {
+    "webpack": "1.14.0",
+    "webpack-dev-server": "1.16.2"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -21,6 +26,7 @@
   },
   "scripts": {
     "dev": "nodemon index.js",
+    "production": "NODE_ENV=production webpack --progress -p",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
